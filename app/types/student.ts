@@ -1,0 +1,41 @@
+export type StudentRideRegistration = {
+  day: string;
+  direction: "pickup" | "dropoff";
+  useType: "vehicle" | "individual";
+  time: string;
+  place: string;
+  runId?: string;
+  vehicleId?: string;
+  vehicleName?: string;
+  handoffGuardian?: string;
+  specialNote?: string;
+};
+
+export type Student = {
+  databaseId?: string;
+  name: string;
+  id: string;
+  birth: string;
+  className: string;
+  classInfo: string;
+  classId?: string;
+  classIds?: string[];
+  teacherMemberId?: string;
+  classDays?: string[];
+  pickupTime?: string;
+  dropoffTime?: string;
+  vehicleId?: string;
+  vehicleName?: string;
+  pickupPlace: string;
+  pickupInfo: string;
+  dropoffPlace: string;
+  dropoffInfo: string;
+  guardian: string;
+  phone: string;
+  photoName?: string;
+  homeAddress?: string;
+  handoffGuardian?: string;
+  rideNotes?: string;
+  generalNotes?: string;
+  rideSchedules?: StudentRideRegistration[];
+};
